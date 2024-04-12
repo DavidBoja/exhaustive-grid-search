@@ -13,7 +13,7 @@
 This Github presents the code for the paper [Addressing the generalization of 3D registration methods with a featureless baseline and an unbiased benchmark](https://link.springer.com/article/10.1007/s00138-024-01510-w) published in the MVA journal.
 
 <p align="center">
-  <img src="https://github.com/DavidBoja/exhaustive-grid-search/blob/main/assets/pipeline-image.png" width="500">
+  <img src="https://github.com/DavidBoja/exhaustive-grid-search/blob/master/assets/pipeline-image.png" width="900">
 </p>
 
 ## TL;DR
@@ -158,7 +158,7 @@ python create_benchmark_comparison_figures.py --param <rotation-translation-or-o
 where `param` can be either `rotation` (Figure 3), `translation` (Figure 4) or `overlap` (Figure 5). You can alter the code in order to add your own benchmark to the figures and compare the rotation, translation and overlap parameter distribution.
 
 <p align="center">
-  <img src="https://github.com/DavidBoja/exhaustive-grid-search/blob/main/assets/param_comparisons.png" width="640">
+  <img src="https://github.com/DavidBoja/exhaustive-grid-search/blob/master/assets/param_comparisons.png" width="900">
 </p>
 
 <br>
@@ -294,7 +294,7 @@ This creates 9 benchmarks: for each parameter (rotation, translation and overlap
 
 ### Differences from our previous work
 
-This work is a continuation of our previous work [greedy-grid-search](https://github.com/davidboja/greedy-grid-search), where the main difference is the computation of the rotation subsampling and the translation estimation, which provide much better results; along with some minor adjustments. The main difference from the previous benchmark [FAUST-partial](https://github.com/davidboja/FAUST-partial) is that we propose a general methodology to create a new benchmark from a point cloud dataset that provides more insights into the 3D registration evaluation.
+This work is a continuation of our previous work [greedy-grid-search](https://github.com/davidboja/greedy-grid-search), where the main difference is the computation of the rotation subsampling and the translation estimation, which provide much better results; along with some minor adjustments. The main difference from the previous benchmark [FAUST-partial](https://github.com/davidboja/FAUST-partial) is that we propose a general methodology to create a new benchmark from a point cloud dataset that provides more insights into the 3D registration evaluation. Please read the accompanying papers for more details.
 
 <br>
 
