@@ -1,0 +1,22 @@
+\begin{table*}[]
+    \centering
+    % \footnotesize
+    \caption{Benchmark statistics for the 3DMatch, KITTI, ETH and FP benchmarks. 
+            The FP--R, FP--T and FP--O--E benchmarks use the same examples with the easy overlap and, therefore, have the same statistics.} \label{tab:dataset-statistics}
+    \setlength{\aboverulesep}{0pt}
+    \setlength{\belowrulesep}{0pt}
+    \begin{tabular}{|l|ccccc|}
+        \cmidrule{2-6}
+        \multicolumn{1}{c|}{} & Number & Number & Average & Average & Average  \\
+        \multicolumn{1}{c|}{}& point & benchmark & number & resolution & size \\
+        \multicolumn{1}{c|}{}& clouds & pairs & points & (cm) & (meters) \\
+        
+        \hline
+        3DMatch & $433$   & $1523$  & $337\text{,}258.21$       & $0.6$ & $2.5 \times 2.0 \times 2.2$     \\ \hline
+        KITTI & $6863$ & $555$  & $123\text{,}589.28$   & $5.2$   & $152.7 \times 95.4 \times 11.3$ \\ \hline
+        ETH   & $132$  & $713$   & $100\text{,}625.28$       & $2.7$   & $33.5 \times 30.4 \times 15.2$  \\ \hline
+        \begin{tabular}[c]{@{}l@{}}FP-R\\ FP-T\\ FP-O-E\end{tabular} & $1184$   & $1686$ & $63\text{,}917.72$  & $0.3$ & $0.7 \times 1.7 \times 0.5$     \\ \hline
+        FP-O-M  & $1173$    & $1935$      & $63\text{,}528.61$  &$ 0.3 $   &    $0.7 \times1.7 \times 0.5$    \\ \hline
+        FP-O-H & $1183$    & $1781$  & $64\text{,}018.49$   &  $0.3$   &     $0.7 \times 1.7 \times 0.5$     \\ \hline
+    \end{tabular}
+\end{table*}

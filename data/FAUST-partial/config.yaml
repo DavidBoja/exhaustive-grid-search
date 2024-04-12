@@ -1,0 +1,23 @@
+
+CREATE-INDICES-VIEWPOINTS-OVERLAP:
+  FAUST-DATA-PATH: '/data/FAUST/training/scans'
+  SAVE-TO: '/data/FAUST-partial/ICO-12'
+  VISUALIZE: False
+  ICOSAHEDRON-SCALE: 1.5
+  ICOSAHAEDRON-NR-DIVISIONS: 0 # this splits the edges of the icosahaedron -- start with 12 points, then 42, 162, 642,..
+
+CREATE-BENCHMARK:
+  DATASET-NAME: 'ALL' # can be 'ALL' to create all datasets
+  SAVE-TO: '/data/FAUST-partial/ICO-12-FIXED-E'
+  ROTATION-EASY-XZ: [[-15,15]] # given as list of desired intervals
+  ROTATION-MEDIUM-XZ: [[-45,-15],[15,45]]
+  ROTATION-HARD-XZ: [[-180,-45],[45,180]] # rotation around x and z can be from -180 to 180
+  ROTATION-EASY-Y: [[-15,15]]
+  ROTATION-MEDIUM-Y: [[-45,-15],[15,45]]
+  ROTATION-HARD-Y: [[-90,-45],[45,90]] # rotation around y can be from -90 to 90
+  TRANSLATION-EASY: [0,1]
+  TRANSLATION-MEDIUM: [1,5]
+  TRANSLATION-HARD: [5,10]
+  OVERLAP-EASY: [60,100]
+  OVERLAP-MEDIUM: [30,60]
+  OVERLAP-HARD: [10,30]

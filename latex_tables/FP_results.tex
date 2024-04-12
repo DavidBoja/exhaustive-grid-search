@@ -1,0 +1,49 @@
+\begingroup
+\renewcommand{\arraystretch}{1.2}
+\begin{table*}[t!]
+\footnotesize
+\centering
+\caption{Faust-partial results for different dataset difficulties. FP--R indicates the dataset where the rotation is varied from an easy to hard setting, whereas the translation and overlap are kept at the easy difficulty. 
+        Similarly, the FP--T and FP--O alter the translation and overlap setting respectively, and keep the remaining parameters fixed.} \label{tab:faust-dataset-results-all}
+\setlength{\aboverulesep}{0pt}
+\setlength{\belowrulesep}{0pt}
+\begin{tabular}
+{|c|l|
+c|c|c|| % results for easy difficulty
+c|c|c|| % results for medium difficulty
+c|c|c| % results for hard difficulty
+}
+\cmidrule{3-11}
+\multicolumn{1}{c}{}  &  & \multicolumn{3}{c||}{Easy}       & \multicolumn{3}{c||}{Medium}   & \multicolumn{3}{c|}{Hard}  \\ \cmidrule{2-11} 
+\multicolumn{1}{c|}{} & Method & RR & RRE & RTE & RR & RRE & RTE & RR & RRE & RTE \\
+\multicolumn{1}{c|}{}  &  & (\%) $\uparrow$  & ($^\circ$) $\downarrow$  & (cm)  $\downarrow$ & (\%) $\uparrow$  & ($^\circ$) $\downarrow$  & (cm)  $\downarrow$ & (\%) $\uparrow$  & ($^\circ$) $\downarrow$  & (cm)  $\downarrow$ \\ \hline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FP -R %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\multirow{5}{*}{\rotatebox{90}{FP--R}}
+& GO-ICP \citep{go-icp} & 0.00 & - & - & 0.06 & 1.87 & 2.71 & 0.00 & - & -  \\
+\cmidrule{2-11} 
+& FPFH+SC2-PCR \citep{SC2-PCR} & \underline{99.64} & \underline{0.95} & \underline{0.43} & 94.54 & \underline{1.43} & \underline{0.60} & 75.21 & 1.76 & 0.78  \\ \cmidrule{2-11}
+& GeDi \citep{GEDI} & $\mathbf{99.76}$  & 1.629 & 1.162 & $\mathbf{99.94}$  &  1.66  & 1.14   & $\mathbf{99.41}$  & 1.70 & 1.63 \\ \cmidrule{2-11}
+& FCGF+SC2-PCR \citep{SC2-PCR} & 98.46 & 1.21 & 0.82 & 91.93 & 1.67 & 1.02 & \underline{85.77} & 1.77 & \underline{1.08}  \\ \cmidrule{2-11}
+& GeoTransformer \citep{geometric-transformer-for-fast-registration}  & 64.12 & 2.29 & 1.57 & 55.93 & 2.26 & 1.63 & 47.75 & \underline{0.47} & 1.69  \\
+\hline
+\multicolumn{1}{c|}{} & EGS & \underline{99.64} & $\mathbf{0.005}$ & $\mathbf{0.002}$ & \underline{97.92} & $\mathbf{0.003}$ & $\mathbf{0.003}$ & 78.00 & $\mathbf{0.01}$ & $\mathbf{0.007}$  \\ \hline
+ %%%%%%%%%%%%%%%%%%%%%%% FP-T %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\multirow{5}{*}{\rotatebox{90}{FP--T}}
+& GO-ICP \citep{go-icp} & 0.00 & - & - & 0.00 & - & - & 0.00 & - & -  \\\cmidrule{2-11} 
+& FPFH+SC2-PCR \citep{SC2-PCR} & $\mathbf{99.76}$ & \underline{0.93} & \underline{0.43} & 99.53 & \underline{0.92} & \underline{0.43} & \underline{99.58} & \underline{0.93} & \underline{0.43}  \\ \cmidrule{2-11} 
+& GeDi \citep{GEDI} & 99.47 & 1.68 & 1.16 & \underline{99.70}  & 1.65 & 1.15 & $\mathbf{99.70}$ & 1.63 & 1.14 \\ \cmidrule{2-11} 
+& FCGF+SC2-PCR \citep{SC2-PCR} & 98.34 & 1.25 & 0.83 & 98.34 & 1.24 & 0.82 & 98.22 & 1.25 & 0.82 \\ \cmidrule{2-11}
+& GeoTransformer \citep{geometric-transformer-for-fast-registration}  & 66.25 & 2.32 & 1.59 & 64.29 & 2.29 & 1.58 & 64.18 & 2.27 & 1.57  \\ 
+\hline
+\multicolumn{1}{c|}{} & EGS & \underline{99.70} & $\mathbf{0.005}$ & $\mathbf{0.002}$ & $\mathbf{99.82}$ & $\mathbf{0.005}$ & $\mathbf{0.002}$ & 98.81 & $\mathbf{0.005}$ & $\mathbf{0.002}$  \\ \hline
+%%%%%%%%%%%%%%%%%%%%%%% FP-O %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\multirow{5}{*}{\rotatebox{90}{FP--O}}
+& GO-ICP \citep{go-icp} & 0.00 & - & - & 0.00 & - & - & 0.00 & - & -  \\ \cmidrule{2-11} 
+& FPFH+SC2-PCR \citep{SC2-PCR} & $\mathbf{99.88}$ & \underline{0.91} & \underline{0.43} & \underline{84.70} & \underline{1.68} & \underline{0.80} & $\mathbf{38.85}$ & \underline{2.42} & \underline{1.23} \\ \cmidrule{2-11} 
+& GeDi \citep{GEDI} & \underline{99.64} & 1.69 & 1.16 & 75.40 & 2.14 & 1.45 & 8.70 & 2.56 & 1.76 \\ \cmidrule{2-11} 
+& FCGF+SC2-PCR \citep{SC2-PCR} & 98.52 & 1.26 & 0.83 & 63.00 & 1.98 & 1.27 & 17.80 & 2.68 & 1.72  \\ \cmidrule{2-11}
+& GeoTransformer \citep{geometric-transformer-for-fast-registration}  & 63.94 & 2.30 & 1.57 & 22.07 & 2.45 & 1.94 & 2.64 & 2.57 & 2.22  \\ \hline
+\multicolumn{1}{c|}{} & EGS & 99.47 & $\mathbf{0.067}$ & $\mathbf{0.035}$ & $\mathbf{88.06}$ & $\mathbf{0.030}$ & $\mathbf{0.017}$ & \underline{37.06} & $\mathbf{0.477}$ & $\mathbf{0.234}$  \\ \cmidrule{2-11}      
+\end{tabular}
+\end{table*}
+\endgroup

@@ -1,0 +1,42 @@
+\begin{table}[ht!]
+    \renewcommand{\arraystretch}{1.27}
+    \footnotesize
+    \caption{Results for $\tau_r=5^\circ$ and $\tau_t=2$m on the KITTI benchmark. 
+            All the methods are trained on the 3DMatch dataset. Results marked with $\dagger$ are taken from \cite{SpinNet,GLORN}. 
+            The results are shown in ascending order w.r.t. the RR measure in each category. We bold and underline the best and the second best results, respectively, for each metric.}
+    \setlength{\aboverulesep}{0pt}
+    \setlength{\belowrulesep}{0pt}
+    \begin{tabular}{|c|l|c|c|c|}
+    \cmidrule{2-5}
+    \multicolumn{1}{c|}{} & Method & RR & RRE & RTE \\
+     \multicolumn{1}{c|}{} & & (\%) $\uparrow$  & ($^\circ$) $\downarrow$  & (cm)  $\downarrow$  \\
+    \hline
+    \multirow{5}{*}{\rotatebox{90}{\tiny TRADITIONAL}} & ICP (P2Point) \citep{point2plane-icp} & 0.00 & - & -   \\ 
+    & GO-ICP \citep{go-icp} & 0.00  &  -  & -  \\ 
+    \cmidrule{2-5}
+    & FPFH+RANSAC-8M \citep{fast-point-feature-histograms} & 9.91 & 2.40 & 36.79 \\
+    & FPFH+RANSAC-2M \citep{fast-point-feature-histograms} & 10.81 & 2.24 &  33.57 \\
+    & FPFH+SC2-PCR \citep{SC2-PCR} & $\mathbf{98.74}$  & 0.38   &  8.87 \\
+    \hline \hline
+    \multirow{14}{*}{\rotatebox{90}{\footnotesize DEEP LEARNING}} & D3Feat-rand$^\dagger$ \citep{d3feat-joint-learning-of-dense-features} & 18.47 & 1.58  & 37.80    \\
+    & FCGF+RANSAC$^\dagger$  \citep{fully-convolutional-geometric-features}      & 24.19 & 1.61  & 27.10    \\
+    & D3Feat-pred$^\dagger$ \citep{d3feat-joint-learning-of-dense-features}& 36.76 & 1.44  & 31.60    \\
+    & DIP  \citep{DIP} & 51.71  & 1.02   & 13.43  \\
+    & SpinNet$^\dagger$   \citep{SpinNet}  & 81.44 & 0.98  & 15.60    \\
+    & GeDi \citep{GEDI} & 82.88 & 0.65 & 10.99 \\
+    \cmidrule{2-5}
+    & FPFH+PointDSC \citep{PointDSC} & 94.05  & \underline{0.33} & \underline{7.44}  \\
+    & FCGF+PointDSC \citep{PointDSC} & 96.76 & 0.37 & 9.45  \\
+    & FCGF+SC2-PCR \citep{SC2-PCR} & \underline{97.66} &  0.38  &  9.61 \\
+    \cmidrule{2-5}
+    & Predator$^\dagger$ \citep{predator} & 41.20 & - & - \\
+    & GeoTransformer \citep{geometric-transformer-for-fast-registration} & 67.93  & 0.51 & 103.03 \\
+    & GLORN$^\dagger$ \citep{GLORN} & 74.30 & - & - \\
+    & YOHO-O \citep{YOHO} & 81.44  & 1.99  & 54.25      \\
+    & YOHO-C \citep{YOHO} & 82.16  & 1.38   &  39.30     \\
+    \hline
+    \multicolumn{1}{c|}{} & EGS & 94.95  & $\mathbf{0.11}$ & $\mathbf{3.90}$ \\
+    \cmidrule{2-5}
+    \end{tabular}
+    \label{tab:KITTI-results-2m}
+    \end{table}

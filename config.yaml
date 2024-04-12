@@ -1,0 +1,317 @@
+
+
+REGISTER-3DMATCH:
+  DATASET-NAME: '3DMATCH'
+  DATASET-PATH: /data/3DMatch/
+  OVERLAP-CSV-PATH: 'data/overlaps/3dmatch_overlap_predator.csv'
+  METHOD-NAME: 'register-3DM'
+  SET-SEED: True
+  GPU-INDEX: 0
+  DTYPE-REGISTRATION: torch.int64
+  VOXEL-SIZE: 0.07
+  CONTINUE-RUN: null
+  ROTATION-OPTION: 'AA_ICO162_S10'
+  PADDING: 'same'
+  PV: 5
+  NV: -1
+  PPV: -1
+  NUM-WORKERS: 8
+  SUBSAMPLING-INDS-PATH: null #data/subsampling/fps_3DMatch_5000.pickle
+
+
+REGISTER-KITTI:
+  DATASET-NAME: 'KITTI'
+  DATASET-PATH: /data/KITTI/
+  METHOD-NAME: 'register-KITTI'
+  SET-SEED: True
+  GPU-INDEX: 0
+  DTYPE-REGISTRATION: torch.int64
+  VOXEL-SIZE: 0.75
+  CONTINUE-RUN: null
+  ROTATION-OPTION: 'AA_ICO162_S10'
+  PADDING: 'same'
+  PV: 5
+  NV: -1
+  PPV: -1
+  NUM-WORKERS: 8
+  SUBSAMPLING-INDS-PATH: null #data/subsampling/fps_KITTI_5000.pickle
+
+
+REGISTER-ETH:
+  DATASET-NAME: 'ETH'
+  DATASET-PATH: /data/ETH/
+  OVERLAP-CSV-PATH: 'data/overlaps/eth_overlap_perfect_match.csv'
+  METHOD-NAME: 'register-ETH'
+  SET-SEED: True
+  GPU-INDEX: 0
+  DTYPE-REGISTRATION: torch.int64
+  VOXEL-SIZE: 0.60
+  CONTINUE-RUN: null
+  ROTATION-OPTION:  'AA_ICO162_S10'
+  PADDING: 'same'
+  PV: 5
+  NV: -1
+  PPV: -1
+  NUM-WORKERS: 8
+  SUBSAMPLING-INDS-PATH: null #data/subsampling/fps_ETH_5000.pickle
+
+
+REGISTER-FP-R-E:
+  DATASET-NAME: 'FP-R-E'
+  SCANS-PATH: '/data/FAUST/training/scans'
+  BENCHMARK-PATH: '/data/FAUST-partial/ICO-12-FIXED-E'
+  METHOD-NAME: 'register-FP-R-E'
+  VOXEL-SIZE: 0.06
+  GPU-INDEX: 0
+  DTYPE-REGISTRATION: torch.int64
+  CONTINUE-RUN: null
+  SET-SEED: True
+  ROTATION-OPTION: 'AA_ICO162_S10'
+  PADDING: 'same'
+  PV: 5
+  NV: -1
+  PPV: -1
+  NUM-WORKERS: 8
+  SUBSAMPLING-INDS-PATH: null
+
+
+REGISTER-FP-R-M:
+  DATASET-NAME: 'FP-R-M'
+  SCANS-PATH: '/data/FAUST/training/scans'
+  BENCHMARK-PATH: '/data/FAUST-partial/ICO-12-FIXED-E'
+  METHOD-NAME: 'register-FP-R-M'
+  VOXEL-SIZE: 0.06
+  GPU-INDEX: 0
+  DTYPE-REGISTRATION: torch.int64
+  CONTINUE-RUN: null
+  SET-SEED: True
+  ROTATION-OPTION: 'AA_ICO162_S10'
+  PADDING: 'same'
+  PV: 5
+  NV: -1
+  PPV: -1
+  NUM-WORKERS: 8
+  SUBSAMPLING-INDS-PATH: null
+
+
+REGISTER-FP-R-H:
+  DATASET-NAME: 'FP-R-H'
+  SCANS-PATH: '/data/FAUST/training/scans'
+  BENCHMARK-PATH: '/data/FAUST-partial/ICO-12-FIXED-E'
+  METHOD-NAME: 'register-FP-R-H'
+  VOXEL-SIZE: 0.06
+  GPU-INDEX: 0
+  DTYPE-REGISTRATION: torch.int64
+  CONTINUE-RUN: null
+  SET-SEED: True
+  ROTATION-OPTION: 'AA_ICO162_S10'
+  PADDING: 'same'
+  PV: 5
+  NV: -1
+  PPV: -1
+  NUM-WORKERS: 8
+  SUBSAMPLING-INDS-PATH: null
+
+
+REGISTER-FP-T-E:
+  DATASET-NAME: 'FP-T-E'
+  SCANS-PATH: '/data/FAUST/training/scans'
+  BENCHMARK-PATH: '/data/FAUST-partial/ICO-12-FIXED-E'
+  METHOD-NAME: 'register-FP-T-E'
+  VOXEL-SIZE: 0.06
+  GPU-INDEX: 0
+  DTYPE-REGISTRATION: torch.int64
+  CONTINUE-RUN: null
+  SET-SEED: True
+  ROTATION-OPTION: 'AA_ICO162_S10'
+  PADDING: 'same'
+  PV: 5
+  NV: -1
+  PPV: -1
+  NUM-WORKERS: 8
+  SUBSAMPLING-INDS-PATH: null
+
+
+REGISTER-FP-T-M:
+  DATASET-NAME: 'FP-T-M'
+  SCANS-PATH: '/data/FAUST/training/scans'
+  BENCHMARK-PATH: '/data/FAUST-partial/ICO-12-FIXED-E'
+  METHOD-NAME: 'register-FP-T-M'
+  VOXEL-SIZE: 0.06
+  GPU-INDEX: 0
+  DTYPE-REGISTRATION: torch.int64
+  CONTINUE-RUN: null
+  SET-SEED: True
+  ROTATION-OPTION: 'AA_ICO162_S10'
+  PADDING: 'same'
+  PV: 5
+  NV: -1
+  PPV: -1
+  NUM-WORKERS: 8
+  SUBSAMPLING-INDS-PATH: null
+
+
+REGISTER-FP-T-H:
+  DATASET-NAME: 'FP-T-H'
+  SCANS-PATH: '/data/FAUST/training/scans'
+  BENCHMARK-PATH: '/data/FAUST-partial/ICO-12-FIXED-E'
+  METHOD-NAME: 'register-FP-T-H'
+  VOXEL-SIZE: 0.06
+  GPU-INDEX: 0
+  DTYPE-REGISTRATION: torch.int64
+  CONTINUE-RUN: null
+  SET-SEED: True
+  ROTATION-OPTION: 'AA_ICO162_S10'
+  PADDING: 'same'
+  PV: 5
+  NV: -1
+  PPV: -1
+  NUM-WORKERS: 8
+  SUBSAMPLING-INDS-PATH: null
+
+
+REGISTER-FP-O-E:
+  DATASET-NAME: 'FP-O-E'
+  SCANS-PATH: '/data/FAUST/training/scans'
+  BENCHMARK-PATH: '/data/FAUST-partial/ICO-12-FIXED-E'
+  METHOD-NAME: 'register-FP-O-E'
+  VOXEL-SIZE: 0.06
+  GPU-INDEX: 0
+  DTYPE-REGISTRATION: torch.int64
+  CONTINUE-RUN: null
+  SET-SEED: True
+  ROTATION-OPTION: 'AA_ICO162_S10'
+  PADDING: 'same'
+  PV: 5
+  NV: -1
+  PPV: -1
+  NUM-WORKERS: 8
+  SUBSAMPLING-INDS-PATH: null
+
+
+REGISTER-FP-O-M:
+  DATASET-NAME: 'FP-O-M'
+  SCANS-PATH: '/data/FAUST/training/scans'
+  BENCHMARK-PATH: '/data/FAUST-partial/ICO-12-FIXED-E'
+  METHOD-NAME: 'register-FP-O-M'
+  VOXEL-SIZE: 0.06
+  GPU-INDEX: 0
+  DTYPE-REGISTRATION: torch.int64
+  CONTINUE-RUN: null
+  SET-SEED: True
+  ROTATION-OPTION: 'AA_ICO162_S10'
+  PADDING: 'same'
+  PV: 5
+  NV: -1
+  PPV: -1
+  NUM-WORKERS: 8
+  SUBSAMPLING-INDS-PATH: null
+
+
+REGISTER-FP-O-H:
+  DATASET-NAME: 'FP-O-H'
+  SCANS-PATH: '/data/FAUST/training/scans'
+  BENCHMARK-PATH: '/data/FAUST-partial/ICO-12-FIXED-E'
+  METHOD-NAME: 'register-FP-O-H'
+  VOXEL-SIZE: 0.06
+  GPU-INDEX: 0
+  DTYPE-REGISTRATION: torch.int64
+  CONTINUE-RUN: null
+  SET-SEED: True
+  ROTATION-OPTION: 'AA_ICO162_S10'
+  PADDING: 'same'
+  PV: 5
+  NV: -1
+  PPV: -1
+  NUM-WORKERS: 8
+  SUBSAMPLING-INDS-PATH: null
+
+
+REGISTER-FPV1:
+  DATASET-NAME: 'FP'
+  SCANS-PATH: '/data/FAUST/training/scans'
+  BENCHMARK-PATH: '/data/FAUST-partial/FPv1'
+  METHOD-NAME: 'register-FPv1'
+  VOXEL-SIZE: 0.06 #3mm is resolution of FAUST
+  GPU-INDEX: 0
+  DTYPE-REGISTRATION: torch.int64
+  CONTINUE-RUN: null
+  SET-SEED: True
+  ROTATION-OPTION: 'AA_ICO162_S10'
+  PADDING: 'same'
+  PV: 5
+  NV: -1
+  PPV: -1
+  NUM-WORKERS: 8
+
+
+REFINE:
+  MAX-ITERATION: 500 # default is 30
+  MAX-CORRESPONDENCE-DISTANCE-QUANTILE: 0.25
+  ICP-VERSION: 'generalized' # options are generalized, p2point, p2plane
+  SUBSAMPLING-INDS-PATH: null #data/subsampling/fps_3DMatch_5000_NEW.pickle
+
+
+CALC-OVERLAP:
+  DATASET: '3DMatch'
+  SAVE-TO: '/registration-baseline/data/overlaps/'
+
+
+
+DATASET-VARS:
+  3DMATCH: 
+    PATH: /data/3DMatch/
+    N: 1523
+    THR-ROT: 15
+    THR-TRANS: 0.3
+  ETH:
+    PATH: /data/ETH/
+    N: 713
+    THR-ROT: 5
+    THR-TRANS: 0.3
+  KITTI:
+    PATH: /data/KITTI/
+    N: 555
+    THR-ROT: 5
+    THR-TRANS: 0.60
+  FP:
+    THR-ROT: 10
+    THR-TRANS: 0.03 # 3cm
+    FPV1:
+      FP:
+        N: 1724
+    FIXED-E:
+      FP-R-E:
+        N: 1686
+      FP-R-M:
+        N: 1686
+      FP-R-H:
+        N: 1686
+      FP-T-E:
+        N: 1686
+      FP-T-M:
+        N: 1686
+      FP-T-H:
+        N: 1686
+      FP-O-E:
+        N: 1686
+      FP-O-M:
+        N: 1935
+      FP-O-H:
+        N: 1781
+
+
+DEMO:
+  METHOD-NAME: 'demo'
+  VOXEL-SIZE: 0.07
+  GPU-INDEX: 1
+  SET-SEED: True
+  ROTATION-OPTION: 'AA_ICO162_S10'
+  PADDING: 'same'
+  PV: 5
+  NV: -1
+  PPV: -1
+  NUM-WORKERS: 8
+  REFINE-NAME: "generalized"
+  REFINE-MAX-ITER: 500
+  REFINE-MAX-CORRESPONDENCE-DISTANCE-QUANTILE: 0.25

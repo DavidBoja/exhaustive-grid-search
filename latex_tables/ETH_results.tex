@@ -1,0 +1,37 @@
+\begin{table}[t!]
+    \renewcommand{\arraystretch}{1.1}
+    \footnotesize
+    \caption{Results for $\tau_r=5^\circ$ and $\tau_t=30$cm on the ETH dataset. 
+            All the methods are trained on the 3DMatch dataset.The results are shown in ascending order w.r.t. the RR measure in each category. 
+            We bold and underline the best and the second best results, respectively, for each metric.}
+    \setlength{\aboverulesep}{0pt}
+    \setlength{\belowrulesep}{0pt}
+    \begin{tabular}{|c|l|c|c|c|}
+    \cmidrule{2-5}
+    \multicolumn{1}{c|}{}& Method      & RR & RRE & RTE \\
+    \multicolumn{1}{c|}{}&  & (\%) $\uparrow$  & ($^\circ$) $\downarrow$  & (cm)  $\downarrow$  \\ \hline
+    \multirow{6}{*}{\rotatebox{90}{\tiny TRADITIONAL}} & GO-ICP \citep{go-icp} & 1.54 & 1.32 & 21.75 \\
+    & ICP (P2Point) \citep{point2point-icp} & 2.10 & 0.57 & 4.20 \\
+    \cmidrule{2-5}
+    & FPFH-2M \citep{fast-point-feature-histograms} & 66.20 & 1.13 & 6.76 \\
+    & FPFH-8M \citep{fast-point-feature-histograms} & 66.34 & 1.09 & 6.48 \\
+    & FPFH+FGR \citep{FGR} & 66.34 & 1.09 & 6.48 \\
+    & FPFH+SC2-PCR \citep{SC2-PCR} & 85.41  & 0.91 & 6.08   \\
+    \hline \hline
+    \multirow{9}{*}{\rotatebox{90}{\footnotesize DEEP LEARNING}} & GeDi \citep{GEDI} & 86.54 & 1.18 & 5.09 \\
+    \cmidrule{2-5}
+    & FPFH+PointDSC \citep{PointDSC} & 41.94 & 0.90 & 6.78 \\
+    & FCGF+PointDSC \citep{PointDSC} &  77.42  &  0.94 &  4.05 \\
+    & FCGF+SC2-PCR \citep{SC2-PCR} & \underline{92.85} &  0.81  & \underline{4.05}  \\
+    \cmidrule{2-5}
+    & GeoTransformer \citep{geometric-transformer-for-fast-registration} & 4.91 & \underline{0.69} &  21.08    \\
+    & DIP \citep{DIP} & 62.41 & 1.94 & 14.71    \\
+    & SpinNet \citep{SpinNet} & 73.07 & 1.20 & 5.35    \\
+    & YOHO-O \citep{YOHO} & 79.94 &  2.16  &  16.11    \\
+    & YOHO-C \citep{YOHO} & 84.85 & 1.95  &  16.17    \\
+    \hline
+    \multicolumn{1}{c|}{}& EGS & $\mathbf{94.25}$ & $\mathbf{0.42}$  &  $\mathbf{1.83}$ \\
+    \cmidrule{2-5}
+    \end{tabular}
+    \label{tab:ETH-results}
+    \end{table}
